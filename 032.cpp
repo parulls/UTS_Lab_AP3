@@ -49,21 +49,6 @@ main (){
     cout<<"Nomor Kartu anda : "<<nomorKartu<<endl;
     cout<<"Tipe kartu anda : "<<tipeKartu<<endl;
     cout<<"Checksum : "<<checksum;
-    /*if (nomorKartu>=5100000000000000 && nomorKartu<=5599999999999999) {
-        if (checksum%10==0) {
-            tipeKartu = "MASTERCARD";
-        }
-        else {
-            tipeKartu = "TIDAK VALID";
-        }
-    }
-    else if((nomorKartu/1000000000000000==4) || (nomorKartu/1000000000000==4)) {
-        if (checksum%10==0) {
-            tipeKartu = "VISA";
-        }
-    }
-    else {tipeKartu="TIDAK DIKETAHUI";}
-
-    */
+    
     return 0;
 }
