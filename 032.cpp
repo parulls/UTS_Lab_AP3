@@ -3,7 +3,6 @@ using namespace std;
 main (){
     system("cls");
     long long nomorKartu;
-    int digitAkhir;
     do 
     {
         cout<<"Masukkan nomor kartu : ";
@@ -14,12 +13,23 @@ main (){
     
     long long angkaKartu=nomorKartu;
     int checksum=0;
+    int digitAkhir;
     while(angkaKartu>0)
     {
         digitAkhir=angkaKartu%10;
         checksum+=digitAkhir;
         angkaKartu/=100;
-        cout<<digitAkhir<<endl;
     }
+
+    long long noKartu=nomorKartu/10;
+    int kaliDua;
+    while(noKartu>0)
+    {
+        digitAkhir=noKartu%10;
+        kaliDua=digitAkhir*2;
+        checksum+=((kaliDua%10)+(kaliDua/10));
+        noKartu/=100;
+    }
+    
     
 }
