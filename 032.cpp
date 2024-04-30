@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int hitungChecksum(long long nomorKartu) {
+int hitungChecksumTidakKaliDua(long long nomorKartu) {
     long long angkaKartu = nomorKartu;
     int checksum = 0, digitAkhir;
     while (angkaKartu > 0) {
@@ -12,7 +12,7 @@ int hitungChecksum(long long nomorKartu) {
     return checksum;
 }
 
-int hitungKaliDua(long long nomorKartu) {
+int hitungChecksumKaliDua(long long nomorKartu) {
     long long noKartu = nomorKartu / 10;
     int checksum = 0, digitAkhir;
     while (noKartu > 0) {
@@ -49,8 +49,8 @@ main() {
         cout << "Masukkan nomor kartu : ";
         cin >> nomorKartu;
     } while (nomorKartu <= 0);
-    int checksum = hitungChecksum(nomorKartu);
-    checksum += hitungKaliDua(nomorKartu);
+    int checksum = hitungChecksumTidakKaliDua(nomorKartu);
+    checksum += hitungChecksumKaliDua(nomorKartu);
     string tipeKartu = cekTipeKartu(nomorKartu, checksum);
     hasilCekKartu(nomorKartu, tipeKartu, checksum);
     return 0;
